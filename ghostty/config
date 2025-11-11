@@ -1,0 +1,9 @@
+
+# Set theme for ghostty window
+theme = Espresso Libre
+
+# Shaders from https://github.com/sahaj-b/ghostty-cursor-shaders
+custom-shader = ./shaders/ripple_cursor.glsl
+custom-shader = ./shaders/cursor_warp.glsl
+custom-shader-animation = always
+
