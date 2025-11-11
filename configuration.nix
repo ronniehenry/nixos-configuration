@@ -69,9 +69,6 @@
     isNormalUser = true;
     description = "Ronnie Henry";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  add pkgs here
-    ];
   };
 
   # Allow unfree packages
@@ -113,10 +110,20 @@
     gcc
     gdb
 
-    # Python interpreter
-    python314Full
-    
-    # change the GNOME look and behaviour 
+    # Python interpreter and accompanying packages
+    python313Full
+    python313Packages.numpy
+    python313Packages.matplotlib
+    python313Packages.pandas
+    # python313Packages.psycopg2
+    # python313Packages.sqlalchemy
+    python313Packages.pip
+
+    # Tools to setup development environments
+    uv
+    devenv
+
+    # Change the GNOME look and behaviour 
     gnome-tweaks
     gnome-extension-manager
     gnomeExtensions.paperwm
@@ -125,7 +132,7 @@
     bibata-cursors
     papirus-icon-theme
 
-    # nice to have
+    # Nice to have
     fastfetch
     btop
     bash-completion
@@ -134,7 +141,7 @@
     zip
     unzip
 
-    # fonts, why not?
+    # Fonts, why not?
     jetbrains-mono
     nerd-fonts.jetbrains-mono
     noto-fonts
